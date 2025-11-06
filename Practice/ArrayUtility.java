@@ -15,6 +15,7 @@ public class ArrayUtility {
         return nums;
     }
 
+      
     public static long arraySum(int[] numArray){
         int sum = 0;
         for(int i=0;i<numArray.length;i++){
