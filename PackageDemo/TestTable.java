@@ -1,40 +1,44 @@
 class Table {
-    synchronized void printTable(int n){
-        for (int i = 1; i <= 10; i++) {
-            System.out.println(n*i);
+    void printTable(int n) {
 
-            try {
-                Thread.sleep(200);
-            } catch (Exception e) {
-                System.out.println(e);
+        synchronized (this) {
+            for (int i = 1; i <= 10; i++) {
+                System.out.println(n * i);
+
+                try {
+                    Thread.sleep(200);
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
             }
+            System.out.println("\n");
         }
-        System.out.println("\n");
+
     }
 }
 
-class MyThread1 extends Thread{
-    
+class MyThread1 extends Thread {
+
     Table T;
 
-    MyThread1(Table T){
+    MyThread1(Table T) {
         this.T = T;
     }
 
-    public void run(){
+    public void run() {
         T.printTable(5);
     }
 }
 
-class MyThread2 extends Thread{
-    
+class MyThread2 extends Thread {
+
     Table T;
 
-    MyThread2(Table T){
+    MyThread2(Table T) {
         this.T = T;
     }
 
-    public void run(){
+    public void run() {
         T.printTable(12);
     }
 }
