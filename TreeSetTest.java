@@ -31,5 +31,19 @@ public class TreeSetTest {
 
         System.out.println("Lowest of 19: "+t1.lower(27));//Lowest of 27
 
+        System.out.println("\n\n");
+
+        TreeSet<Double> t2 = new TreeSet<Double>();
+        t2.add(14.25);
+        t2.add(17.42);
+        t2.add(13.67);
+        t2.add(20.31);
+        t2.add(18.02);
+        t2.add(19.78);
+
+
+        System.out.println("Ceiling of 19.80: " + t2.ceiling(19.80));//Ceiling of 19.80
+        System.out.println("Floor of 17.50: " + t2.floor(17.50));//Floor of 17.50
+
     }
 }
