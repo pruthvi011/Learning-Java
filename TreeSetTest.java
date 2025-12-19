@@ -18,5 +18,8 @@ public class TreeSetTest {
         System.out.println("Tree Set after Poll Methods: "+t1);
 
 
+        System.out.println("Descending Tree Set: "+t1.descendingSet());
+
+
     }
 }
