@@ -12,13 +12,13 @@ public class TreeSetTest {
 
         System.out.println("Tree Set: "+t1);
 
-        t1.pollFirst();
-        t1.pollLast();
+        t1.pollFirst();//POLL First Method
+        t1.pollLast();//POLL Last Method
 
         System.out.println("Tree Set after Poll Methods: "+t1);
 
 
-        System.out.println("Descending Tree Set: "+t1.descendingSet());
+        System.out.println("Descending Tree Set: "+t1.descendingSet());// DescendinSet Method
 
 
     }
